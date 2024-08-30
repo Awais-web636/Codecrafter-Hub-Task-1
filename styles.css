@@ -1,0 +1,166 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #12ac8e;
+  --primary-color-dark: #0d846c;
+  --primary-color-light: #e9f7f7;
+  --secondary-color: #fb923c;
+  --white: #ffffff;
+  --padding-inline-section: 20px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utility Classes */
+
+.container {
+  max-width: 1180px;
+  padding-inline: var(--padding-inline-section);
+  margin-inline: auto;
+  /* border: 1px solid red; */
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background-image: linear-gradient(to right,
+      rgba(18, 172, 142, 0.9),
+      rgba(18, 172, 142, 0.7)),
+    url("assets/header.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.btn {
+  padding: 12px 32px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.hover-link {
+  color: var(--white);
+
+}
+
+/* Navbar */
+
+.main_nav {
+  justify-content: space-between;
+  padding-block: 15px;
+  position: relative;
+}
+
+.logo a {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.logo a span {
+  color: var(--secondary-color);
+}
+
+
+
+.nav_links ul {
+  gap: 60px;
+}
+
+
+.nav_links ul li a {
+  color: var(--primary-color-light);
+  position: relative;
+}
+
+.nav_links ul li a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  background-color: #fb923c;
+  transition: 0.5s;
+}
+
+.nav_links ul li a:hover::before {
+  width: 50%;
+  color: var(--white);
+}
+
+
+
+/* Hero_section */
+
+.hero_section {
+  padding: 30px var(--padding-inline-section) 0px;
+}
+
+.hero_container {
+  padding-block: 100px;
+}
+
+.text {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.text h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 40px;
+}
+
+.text p {
+  color: var(--primary-color-light);
+  font-size: 20px;
+  text-align: center;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--primary-color-dark);
+  margin-top: auto;
+}
+
+.footer_container {
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.copy_right {
+  font-size: 12.8px;
+  color: var(--white);
+}
+
+.icons a i {
+  margin: 0px 10px;
+  color: var(--white);
+}
